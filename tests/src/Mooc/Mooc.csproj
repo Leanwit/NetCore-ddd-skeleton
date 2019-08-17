@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+
+        <IsPackable>false</IsPackable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.0.1" />
+        <PackageReference Include="xunit" Version="2.4.0" />
+        <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="CoursesCounter\Application" />
+      <Folder Include="CoursesCounter\Domain" />
+      <Folder Include="CoursesCounter\Infrastructure\Persistence" />
+      <Folder Include="Courses\Application\Create" />
+      <Folder Include="Courses\Domain" />
+      <Folder Include="Courses\Infrastructure\Persistence" />
+      <Folder Include="Shared\Application\Create" />
+      <Folder Include="Shared\Domain" />
+      <Folder Include="Shared\Infrastructure\Persistence" />
+      <Folder Include="Videos\Application\Create" />
+      <Folder Include="Videos\Domain" />
+      <Folder Include="Videos\Infrastructure\Persistence" />
+    </ItemGroup>
+
+</Project>

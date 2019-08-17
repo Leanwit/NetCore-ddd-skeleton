@@ -1,0 +1,13 @@
+
+{
+  "author": "Witzke Leandro",
+  "classifications": ["Web"],
+  "name": "Domain drive design and netcore 2.2 template",
+  "identity": "FullStack.Template",
+  "shortName": "dddnetcore",
+  "tags": {
+    "language": "C#"
+  },
+  "sourceName": "DDDNetCore",
+  "preferNameDirectory": "true"
+}
