@@ -1,6 +1,6 @@
 namespace Shared.Domain.ValueObject
 {
-    abstract class StringValueObject
+    public abstract class StringValueObject
     {
         protected string Value { get; set; }
 

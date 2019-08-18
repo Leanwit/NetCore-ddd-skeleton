@@ -1,6 +1,7 @@
 namespace Shared.Domain.Bus.Event
 {
     using System;
+    using System.Collections.Generic;
     using ValueObject;
 
     public abstract class DomainEvent
@@ -18,9 +19,9 @@ namespace Shared.Domain.Bus.Event
 
         public abstract string EventName();
         
-        public abstract Array ToPrimitives();
+        public abstract Dictionary<string,string> ToPrimitives();
         
-        public abstract Array FromPrimitive(string aggreateId, Array body, string eventId, string occurredOn);
+        public abstract DomainEvent FromPrimitive(string aggreateId, Dictionary<string, string> body, string eventId, string occurredOn);
 
     }
 }

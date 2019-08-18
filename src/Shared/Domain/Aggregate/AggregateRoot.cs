@@ -3,7 +3,7 @@ namespace Shared.Domain.Aggregate
     using System.Collections.Generic;
     using Bus.Event;
 
-    abstract class AggregateRoot
+    public abstract class AggregateRoot
     {
         private List<DomainEvent> DomainEvents = new List<DomainEvent>();
 
