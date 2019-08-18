@@ -1,6 +1,6 @@
-namespace Mooc.Courses.Domain
+namespace src.Mooc.Courses.Domain
 {
-    using Shared.Domain.ValueObject;
+    using src.Shared.Domain.ValueObject;
 
     public class CourseName : StringValueObject
     {

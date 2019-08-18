@@ -1,4 +1,4 @@
-namespace Shared.Domain.Bus.Event
+namespace src.Shared.Domain.Bus.Event
 {
     public interface DomainEventSerializer
     {

@@ -1,4 +1,4 @@
-namespace Shared.Domain
+namespace src.Shared.Domain
 {
     using System;
     using System.Globalization;

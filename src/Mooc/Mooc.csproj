@@ -2,10 +2,10 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp2.2</TargetFramework>
+        <RootNamespace>src.Mooc</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Shared\Domain" />
       <Folder Include="Shared\Infrastructure" />
       <Folder Include="Videos\Application" />
       <Folder Include="Videos\Domain" />

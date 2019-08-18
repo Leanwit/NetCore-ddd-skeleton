@@ -1,11 +1,11 @@
-namespace Shared.Domain.ValueObject
+namespace src.Shared.Domain.ValueObject
 {
     using System;
     using System.ComponentModel;
 
     public class Uuid
     {
-        private string Value { get; set; }
+        public string Value { get; private set; }
 
         public Uuid(string value)
         {

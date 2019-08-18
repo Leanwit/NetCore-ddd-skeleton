@@ -1,9 +1,7 @@
-namespace Mooc.Courses.Domain
+namespace src.Mooc.Courses.Domain
 {
-    using System;
-    using System.Buffers.Text;
     using System.Collections.Generic;
-    using Shared.Domain.Bus.Event;
+    using src.Shared.Domain.Bus.Event;
 
     public class CourseCreatedDomainEvent : DomainEvent
     {

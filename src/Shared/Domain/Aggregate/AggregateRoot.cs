@@ -1,4 +1,4 @@
-namespace Shared.Domain.Aggregate
+namespace src.Shared.Domain.Aggregate
 {
     using System.Collections.Generic;
     using Bus.Event;

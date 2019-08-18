@@ -1,5 +1,7 @@
-namespace Mooc.Courses.Domain
+namespace src.Mooc.Courses.Domain
 {
+    using Shared.Domain;
+
     public interface CourseRepository
     {
         void Save(Course course);

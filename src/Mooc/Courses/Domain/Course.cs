@@ -1,12 +1,13 @@
-namespace Mooc.Courses.Domain
+namespace src.Mooc.Courses.Domain
 {
-    using Shared.Domain.Aggregate;
+    using Shared.Domain;
+    using src.Shared.Domain.Aggregate;
 
     public class Course : AggregateRoot
     {
-        private CourseId Id { get; set; }
-        private CourseName Name { get; set; }
-        private CourseDuration Duration { get; set; }
+        public CourseId Id { get; private set; }
+        public CourseName Name { get; private set; }
+        public CourseDuration Duration { get; private set; }
 
         public Course(CourseId id, CourseName name, CourseDuration duration)
         {
@@ -18,8 +19,8 @@ namespace Mooc.Courses.Domain
         public static Course Create(CourseId id, CourseName name, CourseDuration duration)
         {
             Course course = new Course(id, name, duration);
-
-            //course.Record(new d);
+            
+            course.Record(new CourseCreatedDomainEvent(id.Value,name.Value,duration.Value));
 
             return course;
         }
