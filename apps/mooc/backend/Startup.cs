@@ -1,18 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-
-namespace backend
+﻿namespace backend
 {
+    using Controllers.Courses;
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.AspNetCore.Hosting;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
+    using src.Mooc.Courses.Application.Create;
+    using src.Mooc.Courses.Domain;
+    using src.Mooc.Courses.Infrastructure;
+    using src.Shared.Domain.Bus.Event;
+
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -26,6 +24,11 @@ namespace backend
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddScoped<ICoursesPutController, CoursesPutController>();
+            services.AddScoped<CourseCreator, CourseCreator>();
+            services.AddScoped<CourseRepository, EFCourseRepository>();
+            services.AddScoped<DomainEventPublisher, SyncDomainEventPublisher>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,7 +45,7 @@ namespace backend
             }
 
             app.UseHttpsRedirection();
-            app.UseMvc();
+            app.UseMvc(routes => { routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}"); });
         }
     }
 }
