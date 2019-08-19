@@ -1,4 +1,4 @@
-namespace src.Mooc.Courses.Infrastructure.Persistence
+namespace src.Mooc.Courses.Infrastructure
 {
     using Domain;
     using Shared.Domain;
@@ -10,7 +10,7 @@ namespace src.Mooc.Courses.Infrastructure.Persistence
         {
             throw new System.NotImplementedException();
         }
-   
+
         public Course search(CourseId id)
         {
             throw new System.NotImplementedException();

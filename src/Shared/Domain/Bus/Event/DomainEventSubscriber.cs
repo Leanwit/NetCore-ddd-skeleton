@@ -4,6 +4,6 @@ namespace src.Shared.Domain.Bus.Event
 
     public interface DomainEventSubscriber
     {
-        List<DomainEvent> SubscribedTo();
+        List<string> SubscribedTo();
     }
 }
