@@ -4,6 +4,7 @@
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Mvc;
+    using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using src.Mooc.Courses.Application.Create;
@@ -27,8 +28,11 @@
 
             services.AddScoped<ICoursesPutController, CoursesPutController>();
             services.AddScoped<CourseCreator, CourseCreator>();
-            services.AddScoped<CourseRepository, EFCourseRepository>();
+            services.AddScoped<CourseRepository, EfCourseRepository>();
             services.AddScoped<DomainEventPublisher, SyncDomainEventPublisher>();
+
+
+            services.AddDbContext<CourseContext>(options => options.UseMySQL("server=localhost;database=Course;user=user;password=password"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

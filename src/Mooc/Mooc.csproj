@@ -7,14 +7,19 @@
 
     <ItemGroup>
         <Folder Include="CoursesCounter\Infraestructure"/>
-      <Folder Include="Shared\Infrastructure" />
-      <Folder Include="Videos\Application" />
-      <Folder Include="Videos\Domain" />
-      <Folder Include="Videos\Infrastructure" />
+        <Folder Include="Shared\Infrastructure"/>
+        <Folder Include="Videos\Application"/>
+        <Folder Include="Videos\Domain"/>
+        <Folder Include="Videos\Infrastructure"/>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Shared\Shared.csproj" />
+        <ProjectReference Include="..\Shared\Shared.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.6"/>
+        <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.17"/>
     </ItemGroup>
 
 </Project>
