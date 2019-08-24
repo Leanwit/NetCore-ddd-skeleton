@@ -10,6 +10,7 @@
     using src.Mooc.Courses.Application.Create;
     using src.Mooc.Courses.Domain;
     using src.Mooc.Courses.Infrastructure;
+    using src.Mooc.Courses.Infrastructure.EfCore;
     using src.Shared.Domain.Bus.Event;
 
     public class Startup
@@ -28,7 +29,7 @@
 
             services.AddScoped<ICoursesPutController, CoursesPutController>();
             services.AddScoped<CourseCreator, CourseCreator>();
-            services.AddScoped<CourseRepository, EfCourseRepository>();
+            services.AddScoped<CourseRepository, EfCoreCourseRepository>();
             services.AddScoped<DomainEventPublisher, SyncDomainEventPublisher>();
 
             services.AddDbContext<CourseContext>(options => options.UseMySQL(Configuration.GetConnectionString("CourseDatabase")));

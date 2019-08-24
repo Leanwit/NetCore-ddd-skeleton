@@ -2,7 +2,7 @@ version: '3.0'
 
 services:
   mysql:
-    container_name: codelytv-php_ddd_skeleton-mooc-mysql
+    container_name: codelytv-netcore_ddd_skeleton-mooc-mysql
     image: mysql:8
     ports:
       - "3360:3306"
