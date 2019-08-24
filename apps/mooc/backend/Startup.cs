@@ -31,8 +31,7 @@
             services.AddScoped<CourseRepository, EfCourseRepository>();
             services.AddScoped<DomainEventPublisher, SyncDomainEventPublisher>();
 
-
-            services.AddDbContext<CourseContext>(options => options.UseMySQL("server=localhost;database=Course;user=user;password=password"));
+            services.AddDbContext<CourseContext>(options => options.UseMySQL(Configuration.GetConnectionString("CourseDatabase")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
