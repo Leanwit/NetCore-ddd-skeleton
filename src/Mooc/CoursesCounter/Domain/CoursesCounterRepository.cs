@@ -1,8 +1,10 @@
 namespace src.Mooc.CoursesCounter.Domain
 {
+    using System.Threading.Tasks;
+
     public interface CoursesCounterRepository
     {
-        void Save(CoursesCounter counter);
+        Task Save(CoursesCounter counter);
 
         CoursesCounter Search();
     }

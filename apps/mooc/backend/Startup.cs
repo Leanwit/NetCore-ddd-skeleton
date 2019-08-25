@@ -14,8 +14,8 @@
     using src.Mooc.Courses.Infrastructure.EfCore;
     using src.Mooc.CoursesCounter.Application.Find;
     using src.Mooc.CoursesCounter.Domain;
-    using src.Mooc.CoursesCounter.Infraestructure;
-    using src.Mooc.CoursesCounter.Infraestructure.EfCore;
+    using src.Mooc.CoursesCounter.Infrastructure;
+    using src.Mooc.CoursesCounter.Infrastructure.EfCore;
     using src.Shared.Domain.Bus.Event;
 
     public class Startup
@@ -36,14 +36,13 @@
             services.AddScoped<CourseCreator, CourseCreator>();
             services.AddScoped<CourseRepository, EfCoreCourseRepository>();
             services.AddScoped<DomainEventPublisher, SyncDomainEventPublisher>();
-            
+
             services.AddScoped<CoursesCounterGetController, CoursesCounterGetController>();
             services.AddScoped<CoursesCounterFinder, CoursesCounterFinder>();
             services.AddScoped<CoursesCounterRepository, EfCoreCoursesCounterRepository>();
 
             services.AddDbContext<CourseContext>(options => options.UseMySQL(Configuration.GetConnectionString("MoocDatabase")));
             services.AddDbContext<CoursesCounterContext>(options => options.UseMySQL(Configuration.GetConnectionString("MoocDatabase")));
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
