@@ -16,15 +16,15 @@ namespace src.Mooc.CoursesCounter.Application.Increment
 
         public List<string> SubscribedTo()
         {
-            return new List<string>() {nameof(CourseCreatedDomainEvent)};
+            return new List<string> {nameof(CourseCreatedDomainEvent)};
         }
 
 
-        public void Execute(CourseCreatedDomainEvent domainEvent)
+        public void Invoke(CourseCreatedDomainEvent domainEvent)
         {
             CourseId courseId = new CourseId(domainEvent.AggregateId);
 
-            this.Incrementer.Execute(courseId);
+            this.Incrementer.Invoke(courseId);
         }
     }
 }

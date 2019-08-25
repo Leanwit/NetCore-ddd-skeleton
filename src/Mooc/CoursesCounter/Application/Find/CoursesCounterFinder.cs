@@ -11,7 +11,7 @@ namespace src.Mooc.CoursesCounter.Application.Find
             this.respository = respository;
         }
 
-        public CoursesCounterResponse Execute()
+        public CoursesCounterResponse Invoke()
         {
             var counter = this.respository.Search();
 

@@ -18,7 +18,7 @@ namespace src.Mooc.CoursesCounter.Application.Increment
             Publisher = publisher;
         }
 
-        public void Execute(CourseId courseId)
+        public void Invoke(CourseId courseId)
         {
             var counter = this.Repository.Search() ?? this.InitializeCounter();
 
