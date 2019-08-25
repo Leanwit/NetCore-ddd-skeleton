@@ -1,11 +1,10 @@
 namespace backend.Controllers.Courses
 {
-    using System.Net;
-    using System.Net.Http;
     using Microsoft.AspNetCore.Mvc;
     using src.Mooc.Courses.Application.Create;
 
-    public class CoursesPutController : ICoursesPutController
+    [Route("[controller]")]
+    public class CoursesPutController : Controller
     {
         private CourseCreator Creator;
 
@@ -15,16 +14,12 @@ namespace backend.Controllers.Courses
         }
 
 
-        [HttpGet]
-        public HttpResponseMessage Execute(string id, string name, string duration)
+        [HttpPut]
+        public IActionResult Invoke(string id, string name, string duration)
         {
-            this.Creator.Execute(new CreateCourseRequest(id, name, duration));
+            this.Creator.Invoke(new CreateCourseRequest(id, name, duration));
 
-            return new HttpResponseMessage(HttpStatusCode.Created);
+            return Ok();
         }
-    }
-
-    public interface ICoursesPutController
-    {
     }
 }
