@@ -17,7 +17,6 @@
       <Folder Include="CoursesCounter\Domain" />
       <Folder Include="CoursesCounter\Infrastructure\Persistence" />
       <Folder Include="Courses\Application\Create" />
-      <Folder Include="Courses\Domain" />
       <Folder Include="Courses\Infrastructure\Persistence" />
       <Folder Include="Shared\Application\Create" />
       <Folder Include="Shared\Domain" />
@@ -25,6 +24,12 @@
       <Folder Include="Videos\Application\Create" />
       <Folder Include="Videos\Domain" />
       <Folder Include="Videos\Infrastructure\Persistence" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\src\Mooc\Mooc.csproj"/>
+        <ProjectReference Include="..\..\..\src\Shared\Shared.csproj"/>
+        <ProjectReference Include="..\Test.Shared\Test.Shared.csproj"/>
     </ItemGroup>
 
 </Project>

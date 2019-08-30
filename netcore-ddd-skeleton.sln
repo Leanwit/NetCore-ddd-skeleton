@@ -28,11 +28,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "apps", "apps", "{BC65E0B4-3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{685266CF-FF6A-4A03-97B6-744562199FA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mooc", "tests\src\Mooc\Mooc.csproj", "{7555FAA9-FE1B-4607-8EDD-11CE7EA4DF95}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Mooc", "tests\src\Test.Mooc\Test.Mooc.csproj", "{7555FAA9-FE1B-4607-8EDD-11CE7EA4DF95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backoffice", "tests\src\Backoffice\Backoffice.csproj", "{CF9D389C-81E3-4F48-9A37-B140BEE362CB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Backoffice", "tests\src\Test.Backoffice\Test.Backoffice.csproj", "{CF9D389C-81E3-4F48-9A37-B140BEE362CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "tests\src\Shared\Shared.csproj", "{00C400FF-5A3F-48E4-BD45-CE04C4909E37}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Shared", "tests\src\Test.Shared\Test.Shared.csproj", "{00C400FF-5A3F-48E4-BD45-CE04C4909E37}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
