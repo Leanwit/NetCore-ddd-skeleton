@@ -7,7 +7,7 @@ namespace src.Shared.Infrastructure
     {
         public string Generate()
         {
-            return new Guid().ToString();
+            return Guid.NewGuid().ToString();
         }
     }
 }

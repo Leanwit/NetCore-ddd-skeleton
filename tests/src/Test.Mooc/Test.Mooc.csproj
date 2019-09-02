@@ -14,8 +14,6 @@
 
     <ItemGroup>
       <Folder Include="CoursesCounter\Application" />
-      <Folder Include="CoursesCounter\Domain" />
-      <Folder Include="CoursesCounter\Infrastructure\Persistence" />
       <Folder Include="Courses\Application\Create" />
       <Folder Include="Courses\Infrastructure\Persistence" />
       <Folder Include="Shared\Application\Create" />

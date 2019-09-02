@@ -6,7 +6,7 @@ namespace Test.Shared.Domain
     {
         public static string Random()
         {
-            return new Guid().ToString();
+            return Guid.NewGuid().ToString();
         }
     }
 }
