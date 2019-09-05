@@ -6,25 +6,21 @@ namespace src.Mooc.Courses.Application.Create
 
     public class CourseCreator
     {
-        private DomainEventPublisher Publisher;
+        private EventBus Bus;
         private CourseRepository Repository;
 
-        public CourseCreator(CourseRepository repository, DomainEventPublisher publisher)
+        public CourseCreator(CourseRepository repository, EventBus bus)
         {
             Repository = repository;
-            Publisher = publisher;
+            Bus = bus;
         }
 
-        public void Invoke(CreateCourseRequest request)
+        public void Invoke(CourseId id, CourseName name, CourseDuration duration)
         {
-            CourseId id = new CourseId(request.Id);
-            CourseName name = new CourseName(request.Name);
-            CourseDuration duration = new CourseDuration(request.Duration);
-
             Course course = Course.Create(id, name, duration);
 
             this.Repository.Save(course);
-            this.Publisher.Publish(course.PullDomainEvent());
+            this.Bus.Publish(course.PullDomainEvent());
         }
     }
 }
